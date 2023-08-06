@@ -7,7 +7,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "HousingHub",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -17,12 +17,12 @@
     "borderStyle": "white",
 
     "list": [{
-      "text": "首页",
+      "text": "新房备案",
       "pagePath": "pages/index/main",
       "iconPath": "static/tabs/home.png",
       "selectedIconPath": "static/tabs/home-active.png"
     }, {
-      "text": "订单",
+      "text": "我的",
       "pagePath": "pages/logs/main",
       "iconPath": "static/tabs/orders.png",
       "selectedIconPath": "static/tabs/orders-active.png"
@@ -40,5 +40,8 @@
       "activeIcon": "static/tabs/orders-active.png"
     }],
     "position": "bottom"
+  },
+  "usingComponents": {
+    "van-button": "static/ui/dist/button/index"
   }
 }

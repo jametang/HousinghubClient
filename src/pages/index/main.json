@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+      "van-dialog": "../../../static/ui/dist/button/index",
+      "van-search": "../../../static/ui/dist/search/index"
+    }
+  }
+  
