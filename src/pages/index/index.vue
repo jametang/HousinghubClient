@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-search  v-model="searchstring" use-action-slot @change="onChange"  @search="onSearch" @cancel="onCancel" placeholder="请输入搜索关键词" />
+    <van-search  v-model="searchValue" use-action-slot @change="onChange"  @click-input="onClickInput" @cancel="onCancel" placeholder="请输入搜索关键词" />
     <van-button  @click="clickHandle" type="primary">主要按钮</van-button>
 
   </div>
@@ -17,7 +17,7 @@ export default {
         nickName: 'mpvue',
         avatarUrl: 'http://mpvue.com/assets/logo.png'
       },
-      searchstring: 'hellow'
+      searchValue: ''
     }
   },
 
@@ -39,15 +39,18 @@ export default {
       // throw {message: 'custom test'}
     },
     onChange(e) {
-      this.searchstring = e.detail
-      console.log('onChange: ', this.searchstring)
+      this.searchValue = e.mp.detail
+      console.log('onChange: ', this.searchValue)
     },
-    onSearch() {
-      console.log('onSearch: ', this.searchstring)
+    onSearch(e) {
+      console.log('onSearch: ', e.mp)
     },
     onCancel() {
-      console.log('onClick: ', this.searchstring)
+      console.log('onCancel: ', this.searchValue)
     },
+    onClickInput(e) {
+      console.log('onClickInput: ', e)
+    }
 
     
   },
